@@ -28,6 +28,8 @@ jobs:
           ${{ runner.OS }}-
     - run: npm install
     - run: npm run deploy
+      env: # Or as an environment variable
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - run: npm test
       env:
         CI: true
