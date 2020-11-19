@@ -27,7 +27,7 @@ jobs:
           ${{ runner.OS }}-node-
           ${{ runner.OS }}-
     - run: npm install
-    - run: npm run build
+    - run: npm run deploy
     - run: npm test
       env:
         CI: true

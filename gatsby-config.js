@@ -6,6 +6,7 @@
 
 module.exports = {
   /* Your site config here */
+  pathPrefix: "/pwa-test",
   plugins: [{
     resolve: `gatsby-plugin-manifest`,
     options: {
