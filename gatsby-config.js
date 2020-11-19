@@ -20,7 +20,7 @@ module.exports = {
   }, {
     resolve: `gatsby-plugin-offline`,
     options: {
-      appendScript: require.resolve(`src/sw-code.js`),
+      appendScript: `src/sw-code.js`,
     },
   },
   ],
