@@ -9,32 +9,34 @@
 //   })
 //   workbox.routing.registerRoute(customRoute)
 
-function notification(text) {
-    self.registration.showNotification(text)
-}
+// function notification(text) {
+//     self.registration.showNotification(text)
+// }
 
-function displayNotification() {
-    //Ask user if we show notifications
-    if (window.Notification && Notification.permission === 'granted') {
-      notification("Hello, world!");
-      // We will create this function in a further step.
-    }
-    // If the user hasn't told whether he wants to be notified or not
-    // Note: because of Chrome, we cannot be sure the permission property
-    // is set, therefore it's unsafe to check for the "default" value.
-    else if (window.Notification && Notification.permission !== 'denied') {
-      Notification.requestPermission(status => {
-        if (status === 'granted') {
-            notification("Hello, world!");
-        } else {
-          alert('You denied or dismissed permissions to notifications.');
-        }
-      });
-    } else {
-      // If the user refuses to get notified
-      alert(
-        'You denied permissions to notifications. Please go to your browser or phone setting to allow notifications.'
-      );
-    }
-  }
-  displayNotification();
+// function displayNotification() {
+//     //Ask user if we show notifications
+//     if (window.Notification && Notification.permission === 'granted') {
+//       notification("Hello, world!");
+//       // We will create this function in a further step.
+//     }
+//     // If the user hasn't told whether he wants to be notified or not
+//     // Note: because of Chrome, we cannot be sure the permission property
+//     // is set, therefore it's unsafe to check for the "default" value.
+//     else if (window.Notification && Notification.permission !== 'denied') {
+//       Notification.requestPermission(status => {
+//         if (status === 'granted') {
+//             notification("Hello, world!");
+//         } else {
+//           alert('You denied or dismissed permissions to notifications.');
+//         }
+//       });
+//     } else {
+//       // If the user refuses to get notified
+//       alert(
+//         'You denied permissions to notifications. Please go to your browser or phone setting to allow notifications.'
+//       );
+//     }
+//   }
+//   displayNotification();
+
+window.serviceWorkerRegistration = self.registration
