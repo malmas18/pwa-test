@@ -31,7 +31,7 @@ jobs:
     - run: npm install
     - run: npm run deploy
       env:
-        GITHUB_TOKEN: ${{ secrets.GithubToken }}
+        GITHUB_TOKEN: ${{ github.token }}
     - run: npm test
       env:
         CI: true
