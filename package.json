@@ -6,13 +6,14 @@
   "license": "0BSD",
   "scripts": {
     "gatsby": "gatsby",
+    "gh-pages": "gh-pages",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GIT_HUB_TOKEN@github.com/malmas18/pwa-test",
+    "deploy": "gatsby build --prefix-paths && gh-pages -b prod -d public -r https://$GIT_HUB_TOKEN@github.com/malmas18/pwa-test",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
   },
   "dependencies": {

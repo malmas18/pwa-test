@@ -26,6 +26,8 @@ jobs:
         restore-keys: |
           ${{ runner.OS }}-node-
           ${{ runner.OS }}-
+    - run: git config user.email "$(git log --format='%ae' HEAD^!)"
+    - run: git config user.name "$(git log --format='%an' HEAD^!)"
     - run: npm install
     - run: npm run deploy
       env:
