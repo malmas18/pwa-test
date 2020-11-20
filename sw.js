@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-dd41f1fe8fbcf2a24234.js"
+    "url": "webpack-runtime-1ab825175954103c9125.js"
   },
   {
     "url": "framework-acb96471af32e2ccbc9d.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "b0c1cf77e0f5ee6b1791995b67b491ed"
+    "revision": "a55298f8452a511a192b77aa68ac7ad3"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-19245c8506e49b502b12.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "dd1a0c288d0a8911d692456e78e31c2c"
+    "revision": "9ec67f02354e7bf1b853d1d5fef1e40b"
   },
   {
     "url": "polyfill-92b076c0eec7a7a7a6c5.js"
@@ -181,32 +181,34 @@ workbox.routing.registerRoute(/\/.gatsby-plugin-offline:.+/, handleAPIRequest)
 //   })
 //   workbox.routing.registerRoute(customRoute)
 
-function notification(text) {
-    self.registration.showNotification(text)
-}
+// function notification(text) {
+//     self.registration.showNotification(text)
+// }
 
-function displayNotification() {
-    //Ask user if we show notifications
-    if (window.Notification && Notification.permission === 'granted') {
-      notification("Hello, world!");
-      // We will create this function in a further step.
-    }
-    // If the user hasn't told whether he wants to be notified or not
-    // Note: because of Chrome, we cannot be sure the permission property
-    // is set, therefore it's unsafe to check for the "default" value.
-    else if (window.Notification && Notification.permission !== 'denied') {
-      Notification.requestPermission(status => {
-        if (status === 'granted') {
-            notification("Hello, world!");
-        } else {
-          alert('You denied or dismissed permissions to notifications.');
-        }
-      });
-    } else {
-      // If the user refuses to get notified
-      alert(
-        'You denied permissions to notifications. Please go to your browser or phone setting to allow notifications.'
-      );
-    }
-  }
-  displayNotification();
+// function displayNotification() {
+//     //Ask user if we show notifications
+//     if (window.Notification && Notification.permission === 'granted') {
+//       notification("Hello, world!");
+//       // We will create this function in a further step.
+//     }
+//     // If the user hasn't told whether he wants to be notified or not
+//     // Note: because of Chrome, we cannot be sure the permission property
+//     // is set, therefore it's unsafe to check for the "default" value.
+//     else if (window.Notification && Notification.permission !== 'denied') {
+//       Notification.requestPermission(status => {
+//         if (status === 'granted') {
+//             notification("Hello, world!");
+//         } else {
+//           alert('You denied or dismissed permissions to notifications.');
+//         }
+//       });
+//     } else {
+//       // If the user refuses to get notified
+//       alert(
+//         'You denied permissions to notifications. Please go to your browser or phone setting to allow notifications.'
+//       );
+//     }
+//   }
+//   displayNotification();
+
+window.serviceWorkerRegistration = self.registration
