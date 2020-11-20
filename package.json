@@ -13,7 +13,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -b prod -d public -r https://$REPO_TOKEN@github.com/malmas18/pwa-test",
+    "deploy": "gatsby build --prefix-paths && gh-pages -b prod -d public -r https://$repo-token@github.com/malmas18/pwa-test",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
   },
   "dependencies": {
