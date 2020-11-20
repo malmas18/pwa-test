@@ -27,27 +27,35 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-027dea7b77bd710484de.js"
+    "url": "webpack-runtime-dd41f1fe8fbcf2a24234.js"
   },
   {
     "url": "framework-acb96471af32e2ccbc9d.js"
   },
   {
-    "url": "app-352dbeab47e7c764b5b0.js"
+    "url": "app-e1b0b7ab04d9c3c96155.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f909b5262e6ba699d3ecbfa7b784af7b"
+    "revision": "b0c1cf77e0f5ee6b1791995b67b491ed"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-19245c8506e49b502b12.js"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "f6081b83111aea4128c98944b7fafccc"
+  },
+  {
+    "url": "page-data/app-data.json",
+    "revision": "dd1a0c288d0a8911d692456e78e31c2c"
   },
   {
     "url": "polyfill-92b076c0eec7a7a7a6c5.js"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "c07033bb134a753b903f47b77ae377ed"
+    "revision": "c81a8daa82d8025282bbbd8a1a7eab70"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -134,12 +142,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/pwa-test`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-352dbeab47e7c764b5b0.js`))) {
+  if (!resources || !(await caches.match(`/pwa-test/app-e1b0b7ab04d9c3c96155.js`))) {
     return await fetch(event.request)
   }
 
@@ -152,7 +160,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/pwa-test/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
@@ -161,8 +169,6 @@ workbox.routing.registerRoute(navigationRoute)
 
 // this route is used when performing a non-navigation request (e.g. fetch)
 workbox.routing.registerRoute(/\/.gatsby-plugin-offline:.+/, handleAPIRequest)
-
-export default function serviceWorker() {}
 
 // show a notification after 15 seconds (the notification
 // permission must be granted first)
