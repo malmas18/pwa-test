@@ -1,0 +1,29 @@
+{
+    "dir": "ltr",
+    "lang": "English",
+    "name": "PWA Test",
+    "short_name": "PWAT",
+    "scope": "/",
+    "display": "standalone",
+    "start_url": "https://malmas18.github.io/pwa-test/",
+    "background_color": "#000000",
+    "theme_color": "transparent",
+    "description": "PWA Test Description",
+    "orientation": "any",
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "https://covidsafe.gov.au/images/favicon.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        },
+        {
+            "src": "https://covidsafe.gov.au/images/webclip.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ],
+    "url": "https://covidsafe.gov.au",
+    "screenshots": []
+}

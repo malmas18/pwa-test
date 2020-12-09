@@ -1,7 +1,7 @@
 {
   "name": "pwa-test",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "",
   "version": "0.1.0",
   "license": "0BSD",
   "scripts": {
@@ -16,16 +16,8 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -b prod -d public -r https://$GITHUB_TOKEN@github.com/malmas18/pwa-test",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
   },
-  "dependencies": {
-    "gatsby": "^2.26.1",
-    "gatsby-cli": "^2.13.1",
-    "gatsby-plugin-manifest": "^2.6.1",
-    "gatsby-plugin-offline": "^3.4.0",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "gh-pages": "^3.1.0",
     "prettier": "2.1.2"
   },
   "repository": {
