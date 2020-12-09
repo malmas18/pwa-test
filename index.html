@@ -1,15 +1,18 @@
 <html>
-    <head>
-        <link rel='manifest' href='manifest.json'>
-        <script type="module">
-            import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
-            const el = document.createElement('pwa-update');
-            document.body.appendChild(el);
-        </script>
-    </head>
-    <body>
+<head>
+    <link rel='manifest'
+          href='/manifest.json'>
+    <script type="module"
+            src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate" />
+</head>
 
-    </body>
+<body>
+    <pwa-update id="updateComponent" swpath="/scripts/serviceworker.js"></pwa-update>
+    <script async
+            defer>
+        const ref = document.getElementById("updateComponent");
+    </script>
+</body>
 
 </html>
