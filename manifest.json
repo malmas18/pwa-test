@@ -5,7 +5,7 @@
     "short_name": "PWAT",
     "scope": "/",
     "display": "standalone",
-    "start_url": "/",
+    "start_url": ".",
     "background_color": "#000000",
     "theme_color": "transparent",
     "description": "PWA Test Description",
