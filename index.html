@@ -1,19 +1,25 @@
 <html>
 
 <head>
-    <link rel="canonical" href="https://malmas18.github.io/pwa-test/" />
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1"
+          name="viewport">
+    <link rel="canonical"
+          href="https://malmas18.github.io/pwa-test/" />
+
+    <base href="/pwa-test" />
     <link rel='manifest'
-          href='/pwa-test/manifest.json'>
+          href='manifest.json'>
     <script type="module"
             src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate" />
-</head>
+    </head>
 
 <body>
-    <pwa-update id="updateComponent" swpath="/pwa-test/pwabuilder-sw.js"></pwa-update>
+    <pwa-update id="updateComponent" swpath="pwabuilder-sw.js"></pwa-update>
     <script async
             defer>
-        const ref = document.getElementById("updateComponent");
-    </script>
-</body>
+                const ref = document.getElementById("updateComponent");
+            </script>
+    </body>
 
 </html>
