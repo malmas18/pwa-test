@@ -11,7 +11,7 @@
       <script type="module"
               src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate"></script>
       <script type="module"
-              src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall@latest/dist/pwa-install.min.js"></script>
+              src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"></script>
       <script type="module">
             import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/6.0.2/workbox-window.prod.mjs';
 
@@ -35,11 +35,11 @@
             </script>
 
       <pwa-install id="installComponent"></pwa-install>
-      <script async
+      <!-- <script async
               defer>
                   const installer = document.getElementById("installComponent");
                   installer.getInstalledStatus();
-            </script>
+            </script> -->
 </body>
 
 </html>
