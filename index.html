@@ -33,16 +33,13 @@
               defer>
                   const updater = document.getElementById("updateComponent");
             </script>
- <pwa-install id="installComponent"></pwa-install>
- <script async defer>
-   const ref = document.getElementById("installComponent");
-   red.getInstalledStatus();
- </script>
-      <!-- <pwa-install id="installComponent"></pwa-install> -->
-      <!-- <script async defer>
-  const installer = document.getElementById("installComponent");
-  installer.getInstalledStatus();
-</script> -->
+
+      <pwa-install id="installComponent"></pwa-install>
+      <script async
+              defer>
+                  const installer = document.getElementById("installComponent");
+                  installer.getInstalledStatus();
+            </script>
 </body>
 
 </html>
