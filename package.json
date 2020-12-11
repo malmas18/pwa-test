@@ -16,7 +16,9 @@
     "deploy": "gatsby build --prefix-paths && gh-pages -b prod -d public -r https://$GITHUB_TOKEN@github.com/malmas18/pwa-test",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0"
   },
-  "dependencies": {},
+  "dependencies": {
+    "workbox-window": "^6.0.2"
+  },
   "devDependencies": {
     "prettier": "2.1.2"
   },
