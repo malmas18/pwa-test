@@ -6,6 +6,7 @@ function askNotificationPermission() {
       Notification.permission = permission;
     }
 
+    let notificationBtn = document.getElementById('notificationBtn');
     // set the button to shown or hidden, depending on what the user answers
     if(Notification.permission === 'denied' || Notification.permission === 'default') {
       notificationBtn.style.display = 'block';
