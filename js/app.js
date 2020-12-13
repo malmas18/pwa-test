@@ -40,3 +40,9 @@ function askNotificationPermission() {
     return true;
   }
 }
+
+function sendNotification() {
+  var img = 'static/github-logo.png';
+  var text = 'notification from pwa test';
+  var notification = new Notification('To do list', { body: text, icon: img });
+}
